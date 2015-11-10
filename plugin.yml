@@ -1,9 +1,8 @@
 name: OverTheServer
 main: ifteam\OverTheServer\OverTheServer
-version: 0.1-Alpha
+version: 0.2-Alpha
 author: ifteam
 api:
-- 1.12.0
 - 1.13.0
 - 2.0.0
 

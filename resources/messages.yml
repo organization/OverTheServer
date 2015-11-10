@@ -6,6 +6,25 @@ m_version: 1
 
 #(EN) ENGLISH
 eng: true
+eng-default-prefix: "[ 서버 ]"
+eng-overtheserver: "overtheserver"
+eng-overtheserver-desc: "서버간 이동목록을 관리합니다"
+eng-overtheserver-help: "/overtheserver <add|del> <서버명> <아이피:포트>"
+eng-serverconnect: "서버이동"
+eng-serverconnect-desc: "명령어로 서버에 등록된 다른서버로 이동 합니다"
+eng-serverconnect-help: "/서버이동 <서버명>"
+eng-serverlist: "서버목록"
+eng-serverlist-desc: "서버에 등록되어있는 서버목록을 확인합니다"
+eng-serverlist-help: "/서버목록"
+eng-add: "add"
+eng-del: "del"
+eng-add-success: "서버 등록에 성공했습니다 !"
+eng-del-success: "서버 등록해제에 성공했습니다 !"
+eng-server-doesnt-exist: "해당 서버가 존재하지 않습니다 ! /서버목록으로 목록 확인가능"
+eng-ingame-only: "게임내에서만 사용 가능합니다 !"
+eng-print-all-server-list: "사용가능한 서버이동 목록을 표시합니다 !"
+eng-can-access-serverconnect: "/서버이동 <서버명> 으로 서버이동 가능 !"
+eng-cause-server-moved: "다른서버로 이동함"
 
 #(KO) KOREAN
 kor: true
@@ -27,6 +46,7 @@ kor-server-doesnt-exist: "해당 서버가 존재하지 않습니다 ! /서버�
 kor-ingame-only: "게임내에서만 사용 가능합니다 !"
 kor-print-all-server-list: "사용가능한 서버이동 목록을 표시합니다 !"
 kor-can-access-serverconnect: "/서버이동 <서버명> 으로 서버이동 가능 !"
+kor-cause-server-moved: "다른서버로 이동함"
 
 # AND YOU CAN PROVIDE YOUR TRANSLATION       #
 # https://github.com/if-Team/PMMP-Plugins/blob/master/examplePlugin/resources/messages.yml
