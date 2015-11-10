@@ -87,6 +87,10 @@ class OverTheServer extends PluginBase implements Listener {
 		return true;
 	}
 	public function onPlayerQuitEvent(PlayerQuitEvent $event) {
+		if (isset ( $this->preventQuitEvent [$event->getPlayer ()->getName ()] )) {
+			unset($this->preventQuitEvent[$event->getPlayer()->getName()]);
+			return;
+		}
 		if (isset ( $this->comatoseState [strtolower ( $event->getPlayer ()->getName () )] )) {
 			$this->setComatoseState ( strtolower ( $event->getPlayer ()->getName () ), false );
 			unset ( $this->comatoseState [strtolower ( $event->getPlayer ()->getName () )] );
