@@ -88,7 +88,7 @@ class OverTheServer extends PluginBase implements Listener {
 	}
 	public function onPlayerQuitEvent(PlayerQuitEvent $event) {
 		if (isset ( $this->preventQuitEvent [$event->getPlayer ()->getName ()] )) {
-			unset($this->preventQuitEvent[$event->getPlayer()->getName()]);
+			unset ( $this->preventQuitEvent [$event->getPlayer ()->getName ()] );
 			return;
 		}
 		if (isset ( $this->comatoseState [strtolower ( $event->getPlayer ()->getName () )] )) {
@@ -125,10 +125,10 @@ class OverTheServer extends PluginBase implements Listener {
 				$this->setComatoseState ( $player->getName (), true );
 				
 				$this->preventQuitEvent [strtolower ( $player->getName () )] = true;
-				$this->getServer ()->getPluginManager ()->callEvent ( $ev = new PlayerQuitEvent ( $player, $this->get ( "cause-server-moved" ), \true ) );
+				$this->getServer ()->getPluginManager ()->callEvent ( $ev = new PlayerQuitEvent ( $player, $player->getLeaveMessage (), \true ) );
 				if ($player->loggedIn === \true and $ev->getAutoSave ())
 					$player->save ();
-				$this->getServer ()->broadcastMessage ( $ev->getQuitMessage () );
+				
 				$player->despawnFromAll ();
 				$this->getServer ()->removeOnlinePlayer ( $player );
 				
